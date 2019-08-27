@@ -36,14 +36,39 @@
     <option name="isMigrated" value="true" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/votepage.jsp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="234">
+              <caret line="61" lean-forward="true" selection-start-line="61" selection-end-line="61" />
+              <folding>
+                <element signature="n#div#1;n#div#1;n#div#0;n#div#1;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" />
+                <element signature="n#div#2;n#div#1;n#div#0;n#div#1;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/resource/css/uiVotePageStyle.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="31">
+              <caret line="1" column="22" selection-start-line="1" selection-start-column="22" selection-end-line="1" selection-end-column="22" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="Interface" />
+        <option value="HTML File" />
         <option value="CSS File" />
         <option value="Class" />
-        <option value="Interface" />
+        <option value="Jsp File" />
       </list>
     </option>
   </component>
@@ -52,6 +77,28 @@
       <find>TheNavigationBar</find>
       <find>executeUpdate</find>
       <find>emp</find>
+      <find>getConnection</find>
+      <find>body</find>
+      <find>am-dropdown-content</find>
+      <find>main</find>
+      <find>content</find>
+      <find>width</find>
+      <find>voteSelect</find>
+      <find>create</find>
+      <find>number</find>
+      <find>getAllFinishedVoteNumber</find>
+      <find>getVotingVoteNumber</find>
+      <find>border</find>
+      <find>allContent</find>
+      <find>a</find>
+      <find>vote_status</find>
+      <find>exitLogin</find>
+      <find>managerVotes</find>
+      <find>createVotes</find>
+      <find>createVote</find>
+      <find>Item</find>
+      <find>managerMain</find>
+      <find>投票列表</find>
     </findStrings>
     <replaceStrings>
       <replace>User</replace>
@@ -61,15 +108,57 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/pom.xml" />
-        <option value="$PROJECT_DIR$/src/main/webapp/resource/js/jquery-3.4.1.min.js" />
-        <option value="$PROJECT_DIR$/src/main/webapp/resource/css/uiStyle.css" />
-        <option value="$PROJECT_DIR$/src/main/webapp/index.jsp" />
-        <option value="$PROJECT_DIR$/src/main/java/com/lf/dao/EmpInterface.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/lf/utils/DBUtil.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/lf/entity/User.java" />
+        <option value="$PROJECT_DIR$/.idea/dataSources.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/com/lf/utils/DBUtil.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/lf/servlet/exitServlet.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/lf/servlet/loginServlet.java" />
+        <option value="$PROJECT_DIR$/src/main/webapp/resource/css/uiStyle.css" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/ready.html" />
+        <option value="$PROJECT_DIR$/src/main/webapp/resource/css/loginStyle.css" />
+        <option value="$PROJECT_DIR$/src/main/webapp/nav.jsp" />
+        <option value="$PROJECT_DIR$/src/main/webapp/resource/js/jquery-3.4.1.min.js" />
+        <option value="$PROJECT_DIR$/src/main/java/com/lf/servlet/AddUserServlet.java" />
+        <option value="$PROJECT_DIR$/src/main/webapp/resource/css/uiLoginStyle.css" />
+        <option value="$PROJECT_DIR$/src/main/webapp/nav.html" />
+        <option value="$PROJECT_DIR$/src/main/webapp/register.jsp" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/votes.jsp" />
+        <option value="$PROJECT_DIR$/src/main/webapp/resource/js/bootstrap.min.js" />
+        <option value="$PROJECT_DIR$/src/main/webapp/resource/css/bootstrap.min.css" />
+        <option value="$PROJECT_DIR$/src/main/webapp/resource/css/uiCreateVotesStyle.css" />
+        <option value="$PROJECT_DIR$/src/main/webapp/resource/css/uiCreate.css" />
+        <option value="$PROJECT_DIR$/src/main/webapp/index.jsp" />
+        <option value="$PROJECT_DIR$/src/main/java/com/lf/servlet/JudgeHasNotSessionServlet.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/lf/servlet/getAllVoteInfoServlet.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/lf/servlet/LoginServlet.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/lf/servlet/CreateVoteServlet.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/lf/servlet/ExitServlet.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/lf/servlet/GetAllVoteInfoServlet.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/lf/entity/Vote.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/lf/servlet/getClickInfoServlet.java" />
+        <option value="$PROJECT_DIR$/src/main/webapp/resource/css/uiGeneral.css" />
+        <option value="$PROJECT_DIR$/src/main/java/com/lf/servlet/GetClickInfoServlet.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/lf/servlet/updateVoteDataServlet.java" />
+        <option value="$PROJECT_DIR$/src/main/webapp/resource/css/editClickStyle.css" />
+        <option value="$PROJECT_DIR$/src/main/webapp/resource/css/uiEditClickStyle.css" />
+        <option value="$PROJECT_DIR$/src/main/java/com/lf/servlet/UpdateVoteDataServlet.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/lf/dao/userInterface.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/lf/dao/EmpDao.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/lf/dao/UserDao.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/lf/servlet/DeleteVoteServlet.java" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" />
+        <option value="$PROJECT_DIR$/src/main/webapp/resource/css/votingListStyle.css" />
+        <option value="$PROJECT_DIR$/src/main/java/com/lf/servlet/DeleteVoteByIdServlet.java" />
+        <option value="$PROJECT_DIR$/src/main/webapp/login.jsp" />
+        <option value="$PROJECT_DIR$/src/main/webapp/createVotes2.jsp" />
+        <option value="$PROJECT_DIR$/src/main/webapp/editClickVote.jsp" />
+        <option value="$PROJECT_DIR$/src/main/webapp/votepage_origin.jsp" />
+        <option value="$PROJECT_DIR$/src/main/webapp/votingList.jsp" />
+        <option value="$PROJECT_DIR$/src/main/webapp/votes.jsp" />
+        <option value="$PROJECT_DIR$/src/main/webapp/createVotes.jsp" />
+        <option value="$PROJECT_DIR$/src/main/webapp/resource/css/uiCreateVotes.css" />
+        <option value="$PROJECT_DIR$/src/main/webapp/resource/css/votes.css" />
+        <option value="$PROJECT_DIR$/src/main/webapp/resource/css/uiVotePageStyle.css" />
+        <option value="$PROJECT_DIR$/src/main/webapp/votepage.jsp" />
       </list>
     </option>
   </component>
@@ -87,9 +176,9 @@
       </MavenGeneralSettings>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
-    <option name="x" value="-105" />
-    <option name="y" value="-25" />
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="100" />
+    <option name="y" value="-15" />
     <option name="width" value="1750" />
     <option name="height" value="1105" />
   </component>
@@ -148,17 +237,7 @@
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="lf" type="462c0819:PsiDirectoryNode" />
-              <item name="dao" type="462c0819:PsiDirectoryNode" />
-              <item name="EmpDao.java" type="529ef68f:ClassesTreeStructureProvider$PsiClassOwnerTreeNode" />
-            </path>
-            <path>
-              <item name="VoteSystem" type="b2602c69:ProjectViewProjectNode" />
-              <item name="VoteSystem" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="lf" type="462c0819:PsiDirectoryNode" />
-              <item name="entity" type="462c0819:PsiDirectoryNode" />
+              <item name="servlet" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="VoteSystem" type="b2602c69:ProjectViewProjectNode" />
@@ -181,36 +260,68 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="webapp" type="462c0819:PsiDirectoryNode" />
+              <item name="resource" type="462c0819:PsiDirectoryNode" />
+              <item name="css" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="VoteSystem" type="b2602c69:ProjectViewProjectNode" />
+              <item name="VoteSystem" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="webapp" type="462c0819:PsiDirectoryNode" />
               <item name="WEB-INF" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
+      <pane id="PackagesPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="VoteSystem" type="58d84e3e:PackageViewProjectNode" />
+              <item name="VoteSystem" type="616d4139:PackageViewModuleNode" />
+            </path>
+            <path>
+              <item name="VoteSystem" type="58d84e3e:PackageViewProjectNode" />
+              <item name="VoteSystem" type="616d4139:PackageViewModuleNode" />
+              <item name="com.lf" type="1f31426a:PackageElementNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
       <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="DatabaseDriversLRU" value="mysql" />
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/webapp/WEB-INF/lib/standard.jar!/" />
+    <property name="database.console.LAST_STATE" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/webapp" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
-    <property name="project.structure.last.edited" value="Modules" />
+    <property name="nodejs_package_manager_path" value="npm" />
+    <property name="project.structure.last.edited" value="Libraries" />
     <property name="project.structure.proportion" value="0.15594542" />
-    <property name="project.structure.side.proportion" value="0.36009175" />
-    <property name="settings.editor.selected.configurable" value="editor.preferences.import" />
+    <property name="project.structure.side.proportion" value="0.15587968" />
+    <property name="settings.editor.selected.configurable" value="preferences.sourceCode.Java" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="F:\JetBrains\IDEADemo\VoteSystem\src\main\webapp\WEB-INF\lib" />
-      <recent name="F:\JetBrains\IDEADemo\VoteSystem\src\main\resource" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="F:\JetBrains\IDEADemo\VoteSystem\src\main\webapp\WEB-INF" />
+      <recent name="F:\JetBrains\IDEADemo\VoteSystem\src\main\webapp\resource\font-awesome-4.7.0\css" />
       <recent name="F:\JetBrains\IDEADemo\VoteSystem\src\main\webapp" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="F:\JetBrains\IDEADemo\VoteSystem\src\main\webapp" />
+      <recent name="F:\JetBrains\IDEADemo\VoteSystem\src\main\webapp\resource\img" />
+      <recent name="F:\JetBrains\IDEADemo\VoteSystem\src\main\webapp\resource\js" />
+      <recent name="F:\JetBrains\IDEADemo\VoteSystem\src\main\webapp\resource\css" />
+      <recent name="F:\JetBrains\IDEADemo\VoteSystem\src\main\webapp\resource" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -225,9 +336,18 @@
       </list>
     </option>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Tomcat Server.VoteSystem">
+    <configuration name="All in VoteSystem" type="JUnit" factoryName="JUnit" nameIsGenerated="true">
+      <module name="VoteSystem" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="TEST_OBJECT" value="package" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="VoteSystem" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 9.0.20" ALTERNATIVE_JRE_ENABLED="true" ALTERNATIVE_JRE_PATH="1.8">
-      <option name="OPEN_IN_BROWSER_URL" value="http://localhost:8080/VoteSystem_war_exploded/index.jsp" />
+      <option name="OPEN_IN_BROWSER_URL" value="http://localhost:8080/VoteSystem_war_exploded" />
+      <option name="COMMON_VM_ARGUMENTS" value="-Dfile.encoding=UTF-8" />
       <option name="UPDATE_ON_FRAME_DEACTIVATION" value="true" />
       <option name="UPDATE_CLASSES_ON_FRAME_DEACTIVATION" value="true" />
       <deployment>
@@ -294,12 +414,16 @@
         </SHUTDOWN>
       </ConfigurationWrapper>
       <method v="2">
-        <option name="Make" enabled="true" />
+        <option name="MakeProject" enabled="true" />
         <option name="BuildArtifacts" enabled="true">
           <artifact name="VoteSystem:war exploded" />
         </option>
       </method>
     </configuration>
+    <list>
+      <item itemvalue="JUnit.All in VoteSystem" />
+      <item itemvalue="Tomcat Server.VoteSystem" />
+    </list>
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -313,12 +437,44 @@
       <updated>1564553687615</updated>
       <workItem from="1564553690942" duration="9941000" />
       <workItem from="1564564275503" duration="3740000" />
-      <workItem from="1564575854972" duration="4307000" />
+      <workItem from="1564575854972" duration="4433000" />
+      <workItem from="1565017494216" duration="2921000" />
+      <workItem from="1565157099204" duration="4191000" />
+      <workItem from="1565161520281" duration="911000" />
+      <workItem from="1565162573078" duration="2839000" />
+      <workItem from="1565166247456" duration="2134000" />
+      <workItem from="1565178954238" duration="2735000" />
+      <workItem from="1565762647819" duration="7096000" />
+      <workItem from="1565770242921" duration="5473000" />
+      <workItem from="1565942553638" duration="8060000" />
+      <workItem from="1566212742538" duration="11531000" />
+      <workItem from="1566224433920" duration="5878000" />
+      <workItem from="1566261037293" duration="13069000" />
+      <workItem from="1566364040396" duration="13165000" />
+      <workItem from="1566396040541" duration="2841000" />
+      <workItem from="1566449519776" duration="3615000" />
+      <workItem from="1566455606918" duration="184000" />
+      <workItem from="1566455824454" duration="98000" />
+      <workItem from="1566455947674" duration="1254000" />
+      <workItem from="1566458623236" duration="27000000" />
+      <workItem from="1566653557235" duration="7109000" />
+      <workItem from="1566660718700" duration="7000" />
+      <workItem from="1566706182317" duration="20856000" />
+      <workItem from="1566869263492" duration="7761000" />
+      <workItem from="1566886331471" duration="10820000" />
     </task>
     <servers />
   </component>
+  <component name="TestHistory">
+    <history-entry file="All_in_VoteSystem - 2019.08.14 at 16h 37m 38s.xml">
+      <configuration name="All in VoteSystem" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="All_in_VoteSystem - 2019.08.14 at 16h 38m 09s.xml">
+      <configuration name="All in VoteSystem" configurationId="JUnit" />
+    </history-entry>
+  </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="17988000" />
+    <option name="totallyTimeSpent" value="179662000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -330,31 +486,34 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
+    <frame x="-7" y="-7" width="1550" height="878" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.4950495" visible="true" weight="0.25670242" />
-      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.48535565" visible="true" weight="0.23927614" />
+      <window_info id="Structure" order="1" sideWeight="0.50884956" side_tool="true" weight="0.21313673" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
       <window_info id="Capture Tool" order="4" />
       <window_info id="UI Designer" order="5" />
       <window_info id="Favorites" order="6" side_tool="true" />
-      <window_info id="Web" order="7" sideWeight="0.5049505" side_tool="true" weight="0.25670242" />
-      <window_info anchor="bottom" id="Application Servers" order="0" weight="0.3281471" />
+      <window_info id="Web" order="7" sideWeight="0.5146443" side_tool="true" weight="0.23927614" />
+      <window_info id="JavaEE:App" order="8" sideWeight="0.5079681" side_tool="true" weight="0.21313673" />
+      <window_info anchor="bottom" id="Application Servers" order="0" weight="0.32797858" />
       <window_info anchor="bottom" id="Terminal" order="1" weight="0.3281471" />
       <window_info anchor="bottom" id="Docker" order="2" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Event Log" order="3" side_tool="true" />
-      <window_info anchor="bottom" id="Messages" order="4" weight="0.32941177" />
-      <window_info anchor="bottom" id="Java Enterprise" order="5" />
-      <window_info anchor="bottom" id="Database Changes" order="6" />
+      <window_info anchor="bottom" id="Event Log" order="3" sideWeight="0.50067025" side_tool="true" weight="0.8910891" />
+      <window_info anchor="bottom" id="Messages" order="4" weight="0.04016064" />
+      <window_info anchor="bottom" id="Java Enterprise" order="5" weight="0.32956153" />
+      <window_info anchor="bottom" id="Database Changes" order="6" weight="0.32956153" />
       <window_info anchor="bottom" id="Version Control" order="7" />
       <window_info anchor="bottom" id="Message" order="8" />
-      <window_info anchor="bottom" id="Find" order="9" />
-      <window_info anchor="bottom" id="Debug" order="10" weight="0.4" />
+      <window_info anchor="bottom" id="Find" order="9" weight="0.32931727" />
+      <window_info anchor="bottom" id="Debug" order="10" sideWeight="0.49932975" weight="0.04016064" />
       <window_info anchor="bottom" id="Cvs" order="11" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="12" weight="0.4" />
-      <window_info anchor="bottom" id="Run" order="13" weight="0.8720588" />
-      <window_info anchor="bottom" id="TODO" order="14" weight="0.32941177" />
+      <window_info anchor="bottom" id="Run" order="13" sideWeight="0.49932975" visible="true" weight="0.04016064" />
+      <window_info anchor="bottom" id="TODO" order="14" weight="0.3281471" />
+      <window_info anchor="bottom" id="Database Console" order="15" weight="0.32956153" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -362,157 +521,401 @@
       <window_info anchor="right" id="Palette" order="4" />
       <window_info anchor="right" id="Capture Analysis" order="5" />
       <window_info anchor="right" id="Key Promoter X" order="6" />
-      <window_info anchor="right" id="Database" order="7" weight="0.15348525" />
-      <window_info anchor="right" id="Palette&#9;" order="8" />
-      <window_info anchor="right" id="Theme Preview" order="9" />
+      <window_info anchor="right" id="Palette&#9;" order="7" />
+      <window_info anchor="right" id="Theme Preview" order="8" />
+      <window_info anchor="right" id="Database" order="9" weight="0.19638069" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
   </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint type="java-method">
+          <url>file://$PROJECT_DIR$/src/main/java/com/lf/dao/UserDao.java</url>
+          <line>347</line>
+          <properties class="com.lf.dao.UserDao" method="getAllVotesNumber">
+            <option name="EMULATED" value="true" />
+          </properties>
+          <option name="timeStamp" value="44" />
+        </line-breakpoint>
+        <line-breakpoint type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/lf/dao/UserDao.java</url>
+          <line>419</line>
+          <properties />
+          <option name="timeStamp" value="49" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/pom.xml">
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/resource/css/uiStyle.css" />
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/resource/css/font-awesome.css" />
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/resource/css/font-awesome.min.css" />
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/resource/js/jQuery v1.10.2.js" />
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/nav.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="347">
-          <caret line="34" selection-start-line="34" selection-end-line="34" />
+        <state relative-caret-position="155">
+          <caret line="5" column="91" selection-start-line="5" selection-start-column="91" selection-end-line="5" selection-end-column="91" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/resource/css/bootstrap.css">
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/register.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="140">
-          <caret line="7" column="9" selection-start-line="7" selection-start-column="9" selection-end-line="7" selection-end-column="9" />
+        <state relative-caret-position="154">
+          <caret line="115" selection-start-line="115" selection-end-line="115" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/votes.jsp" />
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/ready.html" />
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/resource/js/bootstrap.min.js" />
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/resource/img/logo.png" />
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/resource/img/Logo.gif">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/resource/font-awesome-4.7.0/css/font-awesome.min.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="62">
+          <caret line="2" column="51" selection-start-line="2" selection-start-column="51" selection-end-line="2" selection-end-column="51" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/resource/font-awesome-4.7.0/css/font-awesome.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="186">
+          <caret line="6" column="12" selection-start-line="6" selection-start-column="12" selection-end-line="6" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/lf/entity/User.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="22" lean-forward="true" selection-start-column="22" selection-end-column="22" />
+          <folding>
+            <element signature="e#1783#1784#0" expanded="true" />
+            <element signature="e#1831#1832#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$APPLICATION_HOME_DIR$/plugins/JavaScriptLanguage/jsLanguageServicesImpl/external/xpath.d.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-744">
+          <caret line="15" column="8" selection-start-line="15" selection-start-column="8" selection-end-line="15" selection-end-column="8" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/resource/js/jquery-3.4.1.min.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="35">
-          <caret line="1" column="44" selection-start-line="1" selection-start-column="44" selection-end-line="1" selection-end-column="44" />
+        <state relative-caret-position="31">
+          <caret line="1" column="1478" selection-start-line="1" selection-start-column="1478" selection-end-line="1" selection-end-column="1478" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$APPLICATION_HOME_DIR$/plugins/JavaScriptLanguage/jsLanguageServicesImpl/external/lib.dom.d.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="10692" column="13" selection-start-line="10692" selection-start-column="13" selection-end-line="10692" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$APPLICATION_HOME_DIR$/plugins/JavaScriptLanguage/lib/JavaScriptLanguage.jar!/com/intellij/lang/javascript/nashorn/library/nashorn.d.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="229">
+          <caret line="13" column="18" selection-start-line="13" selection-start-column="12" selection-end-line="13" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$APPLICATION_HOME_DIR$/plugins/JavaScriptLanguage/jsLanguageServicesImpl/external/lib.es5.d.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="353">
+          <caret line="475" lean-forward="true" selection-start-line="475" selection-end-line="475" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/lf/servlet/AddUserServlet.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="46">
+          <caret line="10" column="7" lean-forward="true" selection-start-line="10" selection-start-column="7" selection-end-line="11" selection-end-column="45" />
           <folding>
-            <element signature="n#!!doc" expanded="true" />
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/resource/css/uiStyle.css">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/lf/servlet/ExitServlet.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="411">
-          <caret line="61" selection-start-line="61" selection-end-line="61" />
+        <state relative-caret-position="372">
+          <caret line="18" column="7" lean-forward="true" selection-start-line="18" selection-start-column="7" selection-end-line="18" selection-end-column="7" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/8444cd33-2e42-4f2b-ab50-218360b5d957/console.sql">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_221/src.zip!/java/sql/ResultSet.java">
+    <entry file="jar://D:/repository/javax/servlet/javax.servlet-api/3.1.0/javax.servlet-api-3.1.0-sources.jar!/javax/servlet/http/HttpSession.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="226">
-          <caret line="587" column="8" selection-start-line="587" selection-start-column="8" selection-end-line="587" selection-end-column="8" />
+        <state relative-caret-position="229">
+          <caret line="304" column="16" selection-start-line="304" selection-start-column="16" selection-end-line="304" selection-end-column="16" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/lf/utils/DBUtil.java">
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/index.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="12" column="32" lean-forward="true" selection-start-line="12" selection-start-column="32" selection-end-line="12" selection-end-column="32" />
+        <state relative-caret-position="-279">
+          <caret line="12" column="39" selection-start-line="12" selection-start-column="39" selection-end-line="12" selection-end-column="39" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/resource/css/uiLoginStyle.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="212">
+          <caret line="59" column="10" selection-start-line="59" selection-start-column="4" selection-end-line="59" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/resource/css/uiGeneral.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="212">
+          <caret line="8" column="10" selection-start-line="8" selection-start-column="4" selection-end-line="8" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/resource/css/bootstrap.min.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="202">
+          <caret line="4" column="117135" lean-forward="true" selection-start-line="4" selection-start-column="117135" selection-end-line="4" selection-end-column="117135" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/lf/entity/Vote.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="213">
+          <caret line="14" column="11" selection-start-line="14" selection-start-column="11" selection-end-line="14" selection-end-column="11" />
           <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#533#534#0" expanded="true" />
-            <element signature="e#559#560#0" expanded="true" />
+            <element signature="e#2330#2331#0" expanded="true" />
+            <element signature="e#2376#2377#0" expanded="true" />
+            <element signature="e#2409#2410#0" expanded="true" />
+            <element signature="e#2438#2439#0" expanded="true" />
+            <element signature="e#2482#2483#0" expanded="true" />
+            <element signature="e#2518#2519#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_221/src.zip!/java/sql/PreparedStatement.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/lf/servlet/JudgeHasNotSessionServlet.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="218">
-          <caret line="94" column="8" selection-start-line="94" selection-start-column="8" selection-end-line="94" selection-end-column="8" />
+        <state relative-caret-position="415">
+          <caret line="25" column="8" selection-start-line="25" selection-start-column="8" selection-end-line="25" selection-end-column="69" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/lf/dao/EmpDao.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/lf/servlet/GetClickInfoServlet.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1777">
-          <caret line="139" column="22" selection-start-line="139" selection-start-column="22" selection-end-line="139" selection-end-column="22" />
+        <state relative-caret-position="333">
+          <caret line="19" selection-start-line="19" selection-end-line="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/lf/servlet/UpdateVoteDataServlet.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="217">
+          <caret line="15" column="38" selection-start-line="15" selection-start-column="38" selection-end-line="15" selection-end-column="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/lf/dao/UserDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1115">
+          <caret line="416" column="58" selection-start-line="416" selection-start-column="58" selection-end-line="416" selection-end-column="58" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#208#214#0" expanded="true" />
-            <element signature="e#3358#3364#0" expanded="true" />
+            <element signature="method#findAll#0;class#UserDao#0" />
+            <element signature="method#addUser#0;class#UserDao#0" />
+            <element signature="method#upDateUser#0;class#UserDao#0" />
+            <element signature="method#deleteUser#0;class#UserDao#0" />
+            <element signature="method#findUserById#0;class#UserDao#0" />
+            <element signature="method#findUserByUserName#0;class#UserDao#0" />
+            <element signature="method#findPages#0;class#UserDao#0" />
+            <element signature="method#getAllVotesNumber#0;class#UserDao#0" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/lf/dao/userInterface.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="350">
-          <caret line="10" column="52" selection-start-line="10" selection-start-column="52" selection-end-line="10" selection-end-column="52" />
+        <state relative-caret-position="440">
+          <caret line="36" column="42" lean-forward="true" selection-start-line="36" selection-start-column="42" selection-end-line="36" selection-end-column="57" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/lf/entity/User.java">
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
-          <caret line="12" column="19" selection-start-line="12" selection-start-column="19" selection-end-line="12" selection-end-column="19" />
+        <state relative-caret-position="95">
+          <caret line="69" column="36" selection-start-line="69" selection-start-column="22" selection-end-line="69" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/lf/servlet/DeleteVoteByIdServlet.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="310">
+          <caret line="17" column="37" selection-start-line="17" selection-start-column="37" selection-end-line="17" selection-end-column="37" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/createVotes22.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1519">
+          <caret line="49" column="10" lean-forward="true" selection-start-line="16" selection-start-column="4" selection-end-line="49" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/resource/css/votingListStyle.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="229">
+          <caret line="8" column="1" selection-start-line="8" selection-start-column="1" selection-end-line="8" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$APPLICATION_HOME_DIR$/lib/platform-impl.jar!/resources/html5-schema/html5/block.rnc">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="229">
+          <caret line="248" column="16" selection-start-line="248" selection-start-column="16" selection-end-line="248" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/login.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="124">
+          <caret line="25" column="12" selection-start-line="25" selection-start-column="12" selection-end-line="25" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/lf/servlet/LoginServlet.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="347">
+          <caret line="38" column="53" selection-start-line="38" selection-start-column="53" selection-end-line="38" selection-end-column="53" />
           <folding>
-            <element signature="e#805#806#0" expanded="true" />
-            <element signature="e#834#835#0" expanded="true" />
-            <element signature="e#875#876#0" expanded="true" />
-            <element signature="e#911#912#0" expanded="true" />
-            <element signature="e#946#947#0" expanded="true" />
-            <element signature="e#977#978#0" expanded="true" />
-            <element signature="e#1025#1026#0" expanded="true" />
-            <element signature="e#1065#1066#0" expanded="true" />
-            <element signature="e#1104#1105#0" expanded="true" />
-            <element signature="e#1139#1140#0" expanded="true" />
-            <element signature="e#1195#1196#0" expanded="true" />
-            <element signature="e#1243#1244#0" expanded="true" />
-            <element signature="e#1282#1283#0" expanded="true" />
-            <element signature="e#1317#1318#0" expanded="true" />
-            <element signature="e#1373#1374#0" expanded="true" />
-            <element signature="e#1421#1422#0" expanded="true" />
-            <element signature="e#1463#1464#0" expanded="true" />
-            <element signature="e#1501#1502#0" expanded="true" />
-            <element signature="e#1563#1564#0" expanded="true" />
-            <element signature="e#1617#1618#0" expanded="true" />
-            <element signature="e#1654#1655#0" expanded="true" />
-            <element signature="e#1687#1688#0" expanded="true" />
-            <element signature="e#1739#1740#0" expanded="true" />
-            <element signature="e#1783#1784#0" expanded="true" />
-            <element signature="e#1817#1818#0" expanded="true" />
-            <element signature="e#1850#1851#0" expanded="true" />
-            <element signature="e#1899#1900#0" expanded="true" />
-            <element signature="e#1943#1944#0" expanded="true" />
-            <element signature="e#1981#1982#0" expanded="true" />
-            <element signature="e#2015#2016#0" expanded="true" />
-            <element signature="e#2069#2070#0" expanded="true" />
-            <element signature="e#2115#2116#0" expanded="true" />
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/index.jsp">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/lf/servlet/GetAllVoteInfoServlet.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="35">
-          <caret line="11" column="9" selection-start-line="11" selection-start-column="9" selection-end-line="11" selection-end-column="9" />
+        <state relative-caret-position="457">
+          <caret line="38" column="62" selection-start-line="38" selection-start-column="57" selection-end-line="38" selection-end-column="62" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/lf/servlet/CreateVoteServlet.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="333">
+          <caret line="29" column="79" lean-forward="true" selection-start-line="28" selection-start-column="29" selection-end-line="29" selection-end-column="79" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/resource/css/uiEditClickStyle.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="310">
+          <caret line="10" column="21" selection-start-line="10" selection-start-column="1" selection-end-line="10" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/editClickVote.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="129">
+          <caret line="116" selection-start-line="116" selection-end-line="170" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/votepage_origin.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="402">
+          <caret line="48" column="32" selection-start-line="48" selection-start-column="32" selection-end-line="48" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/votingList.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="140" column="21" selection-start-line="140" selection-start-column="21" selection-end-line="140" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/votes.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-493">
+          <caret line="105" column="28" lean-forward="true" selection-start-line="105" selection-start-column="28" selection-end-line="105" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/createVotes.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="375">
+          <caret line="68" column="37" lean-forward="true" selection-start-line="68" selection-start-column="32" selection-end-line="68" selection-end-column="42" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/resource/css/votes.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="491">
+          <caret line="114" column="17" selection-start-line="114" selection-start-column="17" selection-end-line="114" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/resource/css/uiCreateVotes.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="341">
+          <caret line="11" selection-start-line="11" selection-end-line="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/resource/css/uiVotePageStyle.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="31">
+          <caret line="1" column="22" selection-start-line="1" selection-start-column="22" selection-end-line="1" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/votepage.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="234">
+          <caret line="61" lean-forward="true" selection-start-line="61" selection-end-line="61" />
+          <folding>
+            <element signature="n#div#1;n#div#1;n#div#0;n#div#1;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" />
+            <element signature="n#div#2;n#div#1;n#div#0;n#div#1;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" />
+          </folding>
         </state>
       </provider>
     </entry>
   </component>
   <component name="masterDetails">
     <states>
-      <state key="ArtifactsStructureConfigurable.UI">
+      <state key="ArquillianSettingsConfigurable.UI">
         <settings>
-          <artifact-editor />
-          <last-edited>VoteSystem:war exploded</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>
-                <option value="0.36009175" />
-                <option value="0.5" />
+                <option value="0.15587968" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ArtifactsStructureConfigurable.UI">
+        <settings>
+          <artifact-editor />
+          <last-edited>VoteSystem:ear exploded</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.15587968" />
               </list>
             </option>
           </splitter-proportions>
@@ -520,11 +923,11 @@
       </state>
       <state key="FacetStructureConfigurable.UI">
         <settings>
-          <last-edited>Web</last-edited>
+          <last-edited>Detection</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>
-                <option value="0.36009175" />
+                <option value="0.15587968" />
               </list>
             </option>
           </splitter-proportions>
@@ -535,7 +938,7 @@
           <splitter-proportions>
             <option name="proportions">
               <list>
-                <option value="0.36009175" />
+                <option value="0.15587968" />
               </list>
             </option>
           </splitter-proportions>
@@ -547,7 +950,7 @@
           <splitter-proportions>
             <option name="proportions">
               <list>
-                <option value="0.36009175" />
+                <option value="0.15587968" />
               </list>
             </option>
           </splitter-proportions>
@@ -555,12 +958,11 @@
       </state>
       <state key="ModuleStructureConfigurable.UI">
         <settings>
-          <last-edited>VoteSystem</last-edited>
+          <last-edited>javaEEApplication|VoteSystem</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>
-                <option value="0.36009175" />
-                <option value="0.6" />
+                <option value="0.15587968" />
               </list>
             </option>
           </splitter-proportions>
@@ -572,7 +974,7 @@
           <splitter-proportions>
             <option name="proportions">
               <list>
-                <option value="0.36009175" />
+                <option value="0.15587968" />
               </list>
             </option>
           </splitter-proportions>

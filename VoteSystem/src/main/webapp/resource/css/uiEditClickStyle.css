@@ -1,0 +1,31 @@
+.btn_submit_edit{
+    background-color: #4db14d;
+    color: #FFF;
+    padding: 8px 20px 8px 20px;
+    border: none;
+    cursor: pointer;
+}
+.btn_submit_edit:hover{
+    background-color: #34a72d;
+}
+.btn_submit_edit_icon{
+    position: relative;
+    left: 28px;
+    top: 1px;
+    color: #FFF;
+}
+.btn_frame{
+    padding: 20px 0 0 0 ;
+}
+.text-gradient {
+    display: inline-block;
+    color: green;
+    font-size: 20px;
+    font-family: '微软雅黑';
+    background-image: -webkit-gradient(linear, 0 0, 0 bottom, from(#5b62fd), to(#66b0fd));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.vote_status{
+    padding: 5px 0 0 0 ;
+}

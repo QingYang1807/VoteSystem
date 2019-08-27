@@ -1,0 +1,71 @@
+body{
+    background: linear-gradient(to right,#8E54E9, #eafdfb, #0021ff);
+}
+.tpb_max{
+    max-width: 640px;
+    margin: 0 auto;
+}
+.tpb_logo_text{
+    width: 100%;
+    padding-top: 100px;
+    font-size: 26px;
+    text-align: center;
+    color: #FFFFFF;
+}
+.tpb_logo_text span{
+    color: #53d192;
+    margin: 0 10px 0 20px;
+}
+.tpb_login_font{
+    margin: 20px 0 30px 0;
+    width: 100%;
+    text-align: center;
+    font-weight: bold;
+    color: #a4a8aa;
+}
+.loginItem input,.registItem input:nth-of-type(1) , .registItem input:nth-of-type(2), .registItem input:nth-of-type(5), .registItem input:nth-of-type(6),.registItem input:nth-of-type(7){
+    border-radius: 6px;
+    background: #fff;
+    border: none;
+    font-size: 14px;
+    line-height: 30px;
+    text-indent: 30px;
+    width: 100%;
+    height: 45px;
+    margin-bottom: 10px;
+    outline: none;
+}
+.loginItem .submit_btn,.registItem #regist_btn{
+    background: #53d192;
+    cursor: pointer;
+    color: #FFFFFF;
+    font-size: 20px;
+}
+.registItem #regist_btn{
+    margin-top: 10px;
+}
+.loginItem div{
+    text-align: center;
+}
+.registItem span{
+    font-size: 18px;
+}
+#gender_woman,#gender_man,#select_user_type{
+    zoom: 150%;
+    cursor: pointer;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+#select_user_type,#select_user_type option{
+    border-radius: 6px;
+    height: 20px;
+}
+.text-gradient {
+    display: inline-block;
+    color: green;
+    font-size: 20px;
+    font-family: '微软雅黑';
+    background-image: -webkit-gradient(linear, 0 0, 0 bottom, from(#5b62fd), to(#66b0fd));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}

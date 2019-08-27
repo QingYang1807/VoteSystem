@@ -1,0 +1,50 @@
+.backFrame{
+    background-color: #FFF;
+    height: auto;
+}
+.allContent,.backFrame{
+    display: block;
+    height: auto;
+}
+.voteListTitle{
+    width: 100%;
+    color: #32c5d2;
+    font-size: 18px;
+    padding: 10px 0 10px 0;
+    margin: 10px 20px 10px 20px;
+    height: 50px;
+    border-bottom: 1px solid #eef1f5;
+}
+.btn1_createVote,.btn2_filtrate{
+    display: inline-block;
+    padding: 10px 0 10px 20px;
+}
+.btn1_createVote a{
+    background-color: #4db14d;
+    color: #FFF;
+    padding: 10px 20px 10px 20px;
+}
+.btn1_createVote a:hover{
+    background-color: #34a72d;
+}
+.btn2_filtrate a{
+    background-color: #0c80ba;
+    color: #FFF;
+    padding: 10px 20px 10px 20px;
+}
+.btn2_filtrate a:hover{
+    background-color: #1779a9;
+}
+.tableList{
+    width: 100%;
+    height: 100%;
+    padding: 10px 20px 10px 20px;
+}
+.btn{
+    color: #FFFFFF;
+    padding: 3px 15px 3px 15px;
+    cursor: pointer;
+}
+.btn1{background: #F37B1D;}
+.btn2{background: #0e90d2;}
+.btn3{background: #5eb95e;}

@@ -1,0 +1,209 @@
+body{
+    background-color: #e9ecf3;
+    margin: 0;
+    padding: 0;
+}
+.nav{
+    display: block;
+    width: 100%;
+    height: 60px;
+    background: #FFF;
+    position: absolute;
+}
+.main{
+    background: #e9ecf3;
+    width:100%;
+    position:absolute;
+    top: 60px;
+}
+.logo{
+    width: 200px;
+    height: 60px;
+    padding: 0;
+    text-align: center;
+    /*border: 1px solid red;*/
+    display: inline-block;
+}
+.menu{
+    display: block;
+    width: 80px;
+    height: 60px;
+    color: #000;
+    text-align: center;
+    padding-top: 20px;
+    font-size: 25px;
+    /*border: 1px solid green;*/
+    display: inline-block;
+    position: relative;
+    top: -18px;
+}
+.menu i{
+    cursor: pointer;
+}
+.right{
+    position: absolute;
+    right: 0;
+    height: 60px;
+    /*border: 1px yellow solid;*/
+    padding-left: 340px;
+    display: inline-block;
+}
+.notice,.userInfo,.exitLogin{
+    display: inline-block;
+}
+.notice{
+    height: 60px;
+    /*border: 1px solid red;*/
+    padding: 15px 10px 10px 10px;
+    cursor: pointer;
+}
+.userInfo{
+    height:60px;
+    /*border: 1px red solid;*/
+    padding: 15px 10px 10px 10px;
+    cursor: pointer;
+}
+.exitLogin{/*退出登录div*/
+    height:60px;
+    /*border: 1px red solid;*/
+    padding: 15px 10px 10px 10px;
+    cursor: pointer;
+}
+.exitLogin:hover,.userInfo:hover,.notice:hover{
+    background-color: #f6f6f6;
+}
+
+/*管理列表*/
+.main .manageList{
+    width: 17%;
+    height: 500px;
+    /*border: 1px red solid ;*/
+    position: relative;
+    top: 18px;
+    left: 45px;
+    border-radius: 6px;
+    background: #FFF;
+    z-index: 999;
+    display:inline-block;
+}
+.main .manageList ul{
+    list-style-type: none;
+    padding-left: 0px;
+    padding-top: 25px;
+    position: relative;
+    left: -13px;
+    width: 254px;
+}
+.main .manageList ul li:first-child{
+    padding-left: 15px;
+}
+.main .manageList ul li{
+    cursor: pointer;
+}
+.main .manageList ul .liItem:hover{
+    border-left: 3px solid #5C9ACF;
+    background: #f2f6f9;
+    color: #5C9ACF;
+}
+.main .manageList ul .liTitle{
+    color: #5C9ACF;
+    font-size: 14px;
+    font-weight: 600;
+}
+.main .manageList ul .liItem{
+    height: 50px;
+    width:  95.9%;
+    /*border: red 1px solid;*/
+    padding: 10px 0 0 15px ;
+    margin-left: -3px;
+}
+
+
+/*右边主体*/
+.main .content {
+    display: inline-block;
+    margin-left: 50px;
+    /*border: 2px red dashed;*/
+    position: relative;
+    top: 18px;
+}
+.content-page-title{
+    color: #697882;
+    font-size: 22px;
+    font-weight:400;
+}
+.allContent ol li .nextSign{
+    color: #999;
+    font-size: 10px;
+    position: relative;
+    top: -2px;
+    padding: 0 0 0 5px;
+}
+.content-page-title a:hover {
+    color: red;
+    text-decoration: none;
+    font-style: normal;
+}
+.content-page-title a{
+    color: #0e90d2;
+}
+.homeIcon{
+    color: #999;
+    padding-right: 5px;
+}
+ol,li{
+    list-style-type: none;
+}
+a,a:hover{
+    text-decoration: none;
+}
+.content ol{
+    /*border: 1px red solid;*/
+    padding-left: 0px;
+}
+
+/*行卡片*/
+.content .rowCard{
+    /*border: 1px green solid;*/
+    height: 120px;
+}
+.content .rowCard .card{
+    width: 189px;
+    height: 120px;
+    /* border: red 5px dashed; */
+    display: inline-block;
+    margin-right: 15px;
+    background-color: #3598dc;
+    padding: 10px 15px 10px 8px;
+}
+.content .rowCard .card .number{
+    width: 100%;
+    height: 48px;
+    /*border: 2px solid red;*/
+    text-align: right;
+    font-size: 34px;
+    padding-right: 25px;
+    color: #FFF;
+}
+a:hover{
+    text-decoration: none;
+}
+
+.content .rowCard .card .desc{
+    /*border: 2px green solid;*/
+    width: 100%;
+    height: 35px;
+    text-align: right;
+    font-size: 18px;
+    color: #FFF;
+}
+.content .rowCard .card .more i{
+    padding-left: 80px;
+}
+.content .rowCard .card .more{
+    background-color: #3598dc;
+    color: #FFF;
+    padding: 3px 8px 3px 10px;
+    position: relative;
+    top: 4px;
+}

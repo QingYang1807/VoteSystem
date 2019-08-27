@@ -21,6 +21,14 @@ public class User {
         this.userStatus = userStatus;
         this.userVersion = userVersion;
     }
+    public User(String userName, String userPassword, String userRoleName, String userPhoneNumber, String userGender, String userVersion) {
+        this.userName = userName;
+        this.userPassword = userPassword;
+        this.userRoleName = userRoleName;
+        this.userPhoneNumber = userPhoneNumber;
+        this.userGender = userGender;
+        this.userVersion = userVersion;
+    }
 
     public int getUserId() {
         return userId;

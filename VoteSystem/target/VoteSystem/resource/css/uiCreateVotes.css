@@ -1,0 +1,12 @@
+.text-gradient {
+    display: inline-block;
+    color: green;
+    font-size: 20px;
+    font-family: '微软雅黑';
+    background-image: -webkit-gradient(linear, 0 0, 0 bottom, from(#5b62fd), to(#66b0fd));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.input_area{
+    padding: 10px 10px 10px 20px ;
+}
