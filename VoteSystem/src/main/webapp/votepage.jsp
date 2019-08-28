@@ -6,6 +6,22 @@
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" pageEncoding="utf-8" isELIgnored="false"%>
+<%@ page import="java.io.*,java.util.*" %>
+<%@ page import="com.lf.dao.UserDao" %>
+<%
+    Integer hitsCount = (Integer)application.getAttribute("hitCounter");
+    if( hitsCount ==null || hitsCount == 0 ){
+        /* 第一次访问 */
+        hitsCount = 1;
+    }else{
+        /* 返回访问值 */
+        hitsCount += 1;
+    }
+    application.setAttribute("hitCounter", hitsCount);
+    UserDao userDao = new UserDao();
+    int visitedNumber = userDao.setAccessStatistics(hitsCount);
+    request.getSession().setAttribute("visitedNumber",visitedNumber);
+%>
 <%
     String path = request.getContextPath();
     String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+path+"/";
@@ -45,7 +61,7 @@
                 <li class="liItem" id="managerMain">管理首页</li>
                 <li class="liItem" id="createVote">创建投票</li>
                 <li class="liItem" id="managerVotes">管理投票</li>
-                <li class="liItem">账号管理</li>
+                <li class="liItem" id="accounterManager">账号管理</li>
             </ul>
         </div>
 
@@ -68,7 +84,8 @@
                         <a href="createVotes.jsp"> <i class="fa fa-plus" aria-hidden="true"></i>创建投票</a>
                     </div>
                     <div class="btn2_filtrate">
-                        <a href="getCurrentLookInfoById?currentClickVotesId=${currentLookingVoteInfo.votesId}"><i class="fa fa-repeat" aria-hidden="true"></i>刷新</a>
+                        <a href="getCurrentLookInfoById?currentClickVotesId=${currentLookingVoteInfo.votesId}">
+                            <i class="fa fa-repeat" aria-hidden="true"></i>刷新</a>
                     </div>
                     <form action="" method="get">
                         <div class="voteFrame">
@@ -123,16 +140,38 @@
     });
 </script>
 <script>
+    /*$(document).ready(function(){
+        $("button").click(function(){
+            $("div").animate({
+                left:'250px',
+                opacity:'0.5',
+                height:'150px',
+                width:'150px'
+            });
+        });
+    });*/
     function setVoteBar(){
         var option1 = $("#votes_numbe1").text().split("票",1);
         var option2 = $("#votes_numbe2").text().split("票",1);
         var option3 = $("#votes_numbe3").text().split("票",1);
         var option4 = $("#votes_numbe4").text().split("票",1);
         // var a1 = option1.split("票",1);
-        $(".bar1").css("height",option1[0]*20);
-        $(".bar2").css("height",option2[0]*20);
-        $(".bar3").css("height",option3[0]*20);
-        $(".bar4").css("height",option4[0]*20);
+        // $(".bar1").css("height",option1[0]*20);
+        // $(".bar2").css("height",option2[0]*20);
+        // $(".bar3").css("height",option3[0]*20);
+        // $(".bar4").css("height",option4[0]*20);
+        $(".bar1").animate({
+            height: option1[0]*10+'px'
+        },"slow");
+        $(".bar2").animate({
+            height: option2[0]*10+'px'
+        },"slow");
+        $(".bar3").animate({
+            height: option3[0]*10+'px'
+        },"slow");
+        $(".bar4").animate({
+            height: option4[0]*10+'px'
+        },"slow");
     }
 </script>
 <script>
@@ -181,6 +220,9 @@
     });
     $("#managerVotes").click(function () {
         window.location.href = "votingList.jsp";
+    });
+    $("#accounterManager").click(function () {
+        window.location.href = "getCurrentLoginUserInfo";
     });
     $("#menu").click(function () {
         var displayVal = $("#manageList").css("display");

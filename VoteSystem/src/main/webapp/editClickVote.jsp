@@ -7,9 +7,24 @@
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" isELIgnored="false" %>
+<%@ page import="com.lf.dao.UserDao" %>
+<%
+    Integer hitsCount = (Integer)application.getAttribute("hitCounter");
+    if( hitsCount ==null || hitsCount == 0 ){
+        /* 第一次访问 */
+        hitsCount = 1;
+    }else{
+        /* 返回访问值 */
+        hitsCount += 1;
+    }
+    application.setAttribute("hitCounter", hitsCount);
+    UserDao userDao = new UserDao();
+    int visitedNumber = userDao.setAccessStatistics(hitsCount);
+    request.getSession().setAttribute("visitedNumber",visitedNumber);
+%>
 <html>
 <head>
-    <title>管理中心-管理列表-开心投票吧</title>
+    <title>管理中心-编辑投票-开心投票吧</title>
     <link rel="stylesheet" href="resource/css/bootstrap.min.css">
     <link rel="stylesheet" href="resource/font-awesome-4.7.0/css/font-awesome.min.css">
     <script src="resource/js/jquery-3.4.1.min.js"></script>
@@ -24,7 +39,7 @@
     <div class="menu" id="menu"><i class="fa fa-bars" aria-hidden="true"></i></div>
     <div class="right">
         <%--        <div class="notice">提醒</div>--%>
-        <div class="userInfo">
+        <div class="userInfo" id="userInfo">
             <%--            <span>图标</span>--%>
             <span>${LoginUserInfo.userRoleName}</span>
             <%--            <span>头像</span>--%>
@@ -40,8 +55,8 @@
                 <li class="liTitle">管理列表</li>
                 <li class="liItem" id="managerMain">管理首页</li>
                 <li class="liItem" id="createVote">创建投票</li>
-                <li class="liItem">管理投票</li>
-                <li class="liItem">账号管理</li>
+                <li class="liItem" id="managerVotes">管理投票</li>
+                <li class="liItem" id="accounterManager">账号管理</li>
             </ul>
         </div>
 
@@ -51,7 +66,7 @@
                 <ol>
                     <li>
                         <i class="fa fa-home homeIcon"></i>
-                        <a href="votes.jsp">管理首页</a>
+                        <a href="getAllVoteInfo">管理首页</a>
                         <i class="fa fa-angle-double-right nextSign" aria-hidden="true"></i>
                         <a href="">投票列表</a>
                     </li>
@@ -177,10 +192,16 @@
         window.location.href = "exitServlet";
     });
     $("#managerMain").click(function () {
-        window.location.href = "votes.jsp";
+        window.location.href = "getAllVoteInfo";
     });
     $("#logo").click(function () {
-        window.location.href = "votes.jsp";
+        window.location.href = "getAllVoteInfo";
+    });
+    $("#accounterManager").click(function () {
+        window.location.href = "getCurrentLoginUserInfo";
+    });
+    $("#userInfo").click(function () {
+        window.location.href = "getCurrentLoginUserInfo";
     });
     $("#menu").click(function () {
         var displayVal = $("#manageList").css("display");

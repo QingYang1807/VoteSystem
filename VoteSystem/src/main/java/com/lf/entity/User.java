@@ -30,6 +30,16 @@ public class User {
         this.userVersion = userVersion;
     }
 
+    public User(String userName, String userPassword, String userRoleName, String userPhoneNumber, String userGender, int i, String userVersion) {
+        this.userName = userName;
+        this.userPassword = userPassword;
+        this.userRoleName = userRoleName;
+        this.userPhoneNumber = userPhoneNumber;
+        this.userGender = userGender;
+        this.userStatus = userStatus;
+        this.userVersion = userVersion;
+    }
+
     public int getUserId() {
         return userId;
     }

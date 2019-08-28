@@ -32,7 +32,8 @@ public interface userInterface {
     public int getDifferentItemsVotedNumber(String itemName);//获取不同项的投票数
     public int getTotalEnterNumber(String itemName);//总访问量
 
-    public int getAllVotesNumber();//获取总投票数量
+    public int getAllVotesNumber();//获取总投票数量//查询数据中所有的投票数量
+    public int getAllVotesNumberById(String voteId);//通过投票项目ID查询数据中所有的投票数量
 
     public Vote getVoteTicketInfoByID(String votesId);//通过投票ID查找此投票项目所有信息
     public VoteInfo getVoteNmberInfoByID(String votesId);//通过Id获取
@@ -41,4 +42,7 @@ public interface userInterface {
 
     public int getVoteNumberByColumnName(String currentVotingId,String columnName);//通过列名查询对应投票项目ID的票数
     public void addVote(String currentVotingId,String addFindColumnName);//通过Id增加投票数+1
+
+    public int setAccessStatistics(int number);//访问统计
+    public int getAccessStatistics();//访问统计
 }

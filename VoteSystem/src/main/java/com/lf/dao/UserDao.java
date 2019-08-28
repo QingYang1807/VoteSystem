@@ -85,6 +85,7 @@ public class UserDao implements userInterface {
             ps.setString(5, user.getUserGender());
             ps.setInt(6, user.getUserStatus());
             ps.setString(7, user.getUserVersion());
+            ps.setString(8, user.getUserName());
             code=ps.executeUpdate();
             System.out.println("用户信息修改成功！【code:"+code+"】");
         } catch (SQLException e) {
@@ -112,13 +113,13 @@ public class UserDao implements userInterface {
     @Override
     public User findUserById(int id) {
         Connection con=DBUtil.getConnection();
-        String sql="select * from vote_user where id=?";
+        String sql="select * from vote_user where vu_user_id=?";
+        User user=new User();
         try {
             PreparedStatement ps=con.prepareStatement(sql);
             ps.setInt(1,id);
             ResultSet rs= ps.executeQuery();
             if(rs.next()){
-                User user=new User();
                 user.setUserId(rs.getInt("vu_user_id"));
                 user.setUserName(rs.getString("vu_user_name"));
                 user.setUserPassword(rs.getString("vu_user_password"));
@@ -127,23 +128,22 @@ public class UserDao implements userInterface {
                 user.setUserGender(rs.getString("vu_user_gender"));
                 user.setUserStatus(rs.getInt("vu_user_status"));
                 user.setUserVersion(rs.getString("vu_user_version"));
-                return user;
             }
         } catch (SQLException e) {
             e.printStackTrace();
         }
-        return null;
+        return user;
     }
     @Override
     public User findUserByUserName(User findUser) {
         Connection con=DBUtil.getConnection();
         String sql="select * from vote_user where vu_user_name=?";
+        User user=new User();
         try {
             PreparedStatement ps=con.prepareStatement(sql);
             ps.setString(1,findUser.getUserName());
             ResultSet rs= ps.executeQuery();
             if(rs.next()){
-                User user=new User();
                 user.setUserId(rs.getInt("vu_user_id"));
                 user.setUserName(rs.getString("vu_user_name"));
                 user.setUserPassword(rs.getString("vu_user_password"));
@@ -157,7 +157,7 @@ public class UserDao implements userInterface {
         } catch (SQLException e) {
             e.printStackTrace();
         }
-        return null;
+        return user;
     }
 
     @Override
@@ -353,10 +353,48 @@ public class UserDao implements userInterface {
     }
 
     @Override
-    public int getAllVotesNumber() {//还没写完
+    public int getAllVotesNumber() {//查询数据中所有的投票数量
         Connection con = DBUtil.getConnection();
-        String sql = "select count(*) from vote_ticket";
-        return 0;
+        String sql = "select vt_vote_option1,vt_vote_option2,vt_vote_option3,vt_vote_option4 from vote_info";
+        int sum=0;
+        int totalSum = 0;
+        try {
+            PreparedStatement ps = con.prepareStatement(sql);
+            ResultSet rs = ps.executeQuery();
+            while (rs.next()){
+                int vt_vote_option1 = rs.getInt("vt_vote_option1");
+                int vt_vote_option2 = rs.getInt("vt_vote_option2");
+                int vt_vote_option3 = rs.getInt("vt_vote_option3");
+                int vt_vote_option4 = rs.getInt("vt_vote_option4");
+                sum = vt_vote_option1+vt_vote_option2+vt_vote_option3+vt_vote_option4;
+                totalSum += sum;
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return totalSum;
+    }
+
+    @Override
+    public int getAllVotesNumberById(String voteId) {//通过投票项目ID查询数据中所有的投票数量
+        Connection con = DBUtil.getConnection();
+        String sql = "select vt_vote_option1,vt_vote_option2,vt_vote_option3,vt_vote_option4 from vote_info " +
+                "where vt_id = '"+voteId+"'";
+        int sum=0;
+        try {
+            PreparedStatement ps = con.prepareStatement(sql);
+            ResultSet rs = ps.executeQuery();
+            while (rs.next()){
+                int vt_vote_option1 = rs.getInt("vt_vote_option1");
+                int vt_vote_option2 = rs.getInt("vt_vote_option2");
+                int vt_vote_option3 = rs.getInt("vt_vote_option3");
+                int vt_vote_option4 = rs.getInt("vt_vote_option4");
+                sum = vt_vote_option1+vt_vote_option2+vt_vote_option3+vt_vote_option4;
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return sum;
     }
 
     /**
@@ -513,5 +551,36 @@ public class UserDao implements userInterface {
         } catch (SQLException e) {
             e.printStackTrace();
         }
+    }
+
+    @Override
+    public int setAccessStatistics(int number) {
+        Connection con = DBUtil.getConnection();
+        String sql = "update visited_stastic set visit_number = "+number;
+        int code = 0;
+        try {
+            PreparedStatement ps = con.prepareStatement(sql);
+            code = ps.executeUpdate();
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return code;
+    }
+
+    @Override
+    public int getAccessStatistics() {
+        Connection con = DBUtil.getConnection();
+        String sql = "select visit_number from visited_stastic";
+        int countNumber=0;
+        try {
+            PreparedStatement ps = con.prepareStatement(sql);
+            ResultSet rs = ps.executeQuery();
+            while(rs.next()){
+                countNumber = rs.getInt("visit_number");
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return countNumber;
     }
 }

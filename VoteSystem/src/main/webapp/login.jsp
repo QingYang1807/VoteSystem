@@ -7,6 +7,18 @@
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" pageEncoding="utf-8" isELIgnored="false" %>
+<%@ page import="java.io.*,java.util.*" %>
+<%
+    Integer hitsCount = (Integer)application.getAttribute("hitCounter");
+    if( hitsCount ==null || hitsCount == 0 ){
+        /* 第一次访问 */
+        hitsCount = 1;
+    }else{
+        /* 返回访问值 */
+        hitsCount += 1;
+    }
+    application.setAttribute("hitCounter", hitsCount);
+%>
 <html>
 <head>
     <title>Login Page</title>

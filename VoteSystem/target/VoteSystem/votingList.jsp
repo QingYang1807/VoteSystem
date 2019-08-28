@@ -7,13 +7,28 @@
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" isELIgnored="false" %>
+<%@ page import="com.lf.dao.UserDao" %>
+<%
+    Integer hitsCount = (Integer)application.getAttribute("hitCounter");
+    if( hitsCount ==null || hitsCount == 0 ){
+        /* 第一次访问 */
+        hitsCount = 1;
+    }else{
+        /* 返回访问值 */
+        hitsCount += 1;
+    }
+    application.setAttribute("hitCounter", hitsCount);
+    UserDao userDao = new UserDao();
+    int visitedNumber = userDao.setAccessStatistics(hitsCount);
+    request.getSession().setAttribute("visitedNumber",visitedNumber);
+%>
 <%
     String path = request.getContextPath();
     String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+path+"/";
 %>
 <html>
 <head>
-    <title>管理中心-管理列表-开心投票吧</title>
+    <title>管理中心-开心投票吧</title>
     <base href="<%=basePath%>">
     <link rel="stylesheet" href="resource/css/bootstrap.min.css">
     <link rel="stylesheet" href="resource/font-awesome-4.7.0/css/font-awesome.min.css">
@@ -28,7 +43,7 @@
     <div class="menu" id="menu"><i class="fa fa-bars" aria-hidden="true"></i></div>
     <div class="right">
         <%--        <div class="notice">提醒</div>--%>
-        <div class="userInfo">
+        <div class="userInfo" id="userInfo">
             <%--            <span>图标</span>--%>
             <span>${LoginUserInfo.userRoleName}</span>
             <%--            <span>头像</span>--%>
@@ -45,7 +60,7 @@
                 <li class="liItem" id="managerMain">管理首页</li>
                 <li class="liItem" id="createVoteNav">创建投票</li>
                 <li class="liItem" id="managerVotes">管理投票</li>
-                <li class="liItem">账号管理</li>
+                <li class="liItem" id="accounterManager">账号管理</li>
             </ul>
         </div>
 
@@ -55,7 +70,7 @@
                 <ol>
                     <li>
                         <i class="fa fa-home homeIcon"></i>
-                        <a href="votes.jsp">管理首页</a>
+                        <a href="getAllVoteInfo">管理首页</a>
                         <i class="fa fa-angle-double-right nextSign" aria-hidden="true"></i>
                         <a id="lookVoteLink">投票列表</a>
                     </li>
@@ -67,13 +82,14 @@
                         <a href="createVotes.jsp"> <i class="fa fa-plus" aria-hidden="true"></i>创建投票</a>
                     </div>
                     <div class="btn2_filtrate">
-                        <a href=""><i class="fa fa-crosshairs" aria-hidden="true"></i>筛选</a>
+                        <a href="getEveryVoteNumberByVoteId">
+                            <i class="fa fa-repeat" aria-hidden="true"></i>刷新</a>
                     </div>
                     <c:choose>
-                        <c:when test="${votingNumber==0}">
+                        <c:when test="${votingNumber==0&&finishedNumber==0}">
                             <span class="text-gradient vote0_notice">投票项为空，请 <a href="createVotes.jsp" class="text-gradient2">创建</a>哦~</span>
                         </c:when>
-                        <c:when test="${votingNumber!=0}">
+                        <c:when test="${votingNumber!=0||finishedNumber!=0}">
                             <div class="tableList">
                                 <table>
                                     <tr>
@@ -85,11 +101,11 @@
                                         <td>操作</td>
                                     </tr>
                                     <%int i=1;%>
-                                    <c:forEach items="${arrayList}" var="al">
+                                    <c:forEach items="${voteArrayList}" var="al">
                                         <tr>
                                             <td id="votesID_<%=i%>"><c:out value="${al.votesId}"></c:out></td>
                                             <td><c:out value="${al.votesName}"></c:out></td>
-                                            <td><c:out value="${al.contentVoteDesc}"></c:out></td>
+                                            <td><c:out value="${sessionScope[al.votesId]}"></c:out></td>
                                             <td><c:out value="${al.status}"></c:out></td>
                                             <td>
                                                 开始时间:<c:out value="${al.startDate}"></c:out> <br>
@@ -155,13 +171,19 @@
         window.location.href = "exitServlet";
     });
     $("#managerMain").click(function () {
-        window.location.href = "votes.jsp";
+        window.location.href = "getAllVoteInfo";
     });
     $("#logo").click(function () {
-        window.location.href = "votes.jsp";
+        window.location.href = "getAllVoteInfo";
     });
     $("#managerVotes").click(function () {
         window.location.href = "votingList.jsp";
+    });
+    $("#accounterManager").click(function () {
+        location.href = "getCurrentLoginUserInfo";
+    });
+    $("#userInfo").click(function () {
+        window.location.href = "getCurrentLoginUserInfo";
     });
     $("#menu").click(function () {
         var displayVal = $("#manageList").css("display");

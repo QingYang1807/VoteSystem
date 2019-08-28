@@ -1,5 +1,5 @@
-<%@ page import="java.text.SimpleDateFormat" %>
-<%@ page import="java.util.Date" %><%--
+<%@ page import="com.lf.dao.UserDao" %>
+<%@ page import="java.text.SimpleDateFormat" %><%--
   Created by IntelliJ IDEA.
   User: 16414
   Date: 2019/8/22
@@ -7,13 +7,29 @@
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" isELIgnored="false" %>
+<%@ page import="java.util.Date" %>
+<%
+    Integer hitsCount = (Integer)application.getAttribute("hitCounter");
+    if( hitsCount ==null || hitsCount == 0 ){
+        /* 第一次访问 */
+        hitsCount = 1;
+    }else{
+        /* 返回访问值 */
+        hitsCount += 1;
+    }
+    application.setAttribute("hitCounter", hitsCount);
+    UserDao userDao = new UserDao();
+    int visitedNumber = userDao.setAccessStatistics(hitsCount);
+    request.getSession().setAttribute("visitedNumber",visitedNumber);
+%>
 <%
     String path = request.getContextPath();
     String basePath = request.getScheme() + "://" + request.getServerName() + ":" + request.getServerPort() + path + "/";
 %>
+
 <html>
 <head>
-    <title>管理中心-管理列表-开心投票吧</title>
+    <title>管理中心-创建投票-开心投票吧</title>
     <base href="<%=basePath%>">
     <link rel="stylesheet" href="resource/css/bootstrap.min.css">
     <link rel="stylesheet" href="resource/font-awesome-4.7.0/css/font-awesome.min.css">
@@ -24,13 +40,14 @@
     <link rel="stylesheet" href="resource/css/uiCreateVotes.css">
 </head>
 <body onload="a_link()">
+
 <!--导航栏-->
 <div class="nav">
     <div class="logo" style="background-image: url('resource/img/Logo.gif')"></div>
     <div class="menu" id="menu"><i class="fa fa-bars" aria-hidden="true"></i></div>
     <div class="right">
         <%--        <div class="notice">提醒</div>--%>
-        <div class="userInfo">
+        <div class="userInfo" id="userInfo">
             <%--            <span>图标</span>--%>
             <span>${LoginUserInfo.userRoleName}</span>
             <%--            <span>头像</span>--%>
@@ -47,7 +64,7 @@
                 <li class="liItem" id="managerMain">管理首页</li>
                 <li class="liItem" id="createVoteNav">创建投票</li>
                 <li class="liItem" id="managerVotes">管理投票</li>
-                <li class="liItem">账号管理</li>
+                <li class="liItem" id="accounterManager">账号管理</li>
             </ul>
         </div>
 
@@ -57,7 +74,7 @@
                 <ol>
                     <li>
                         <i class="fa fa-home homeIcon"></i>
-                        <a href="votes.jsp">管理首页</a>
+                        <a href="getAllVoteInfo">管理首页</a>
                         <i class="fa fa-angle-double-right nextSign" aria-hidden="true"></i>
                         <a id="create_vote_link">创建投票</a>
                     </li>
@@ -186,13 +203,19 @@
         window.location.href = "exitServlet";
     });
     $("#managerMain").click(function () {
-        window.location.href = "votes.jsp";
+        window.location.href = "getAllVoteInfo";
     });
     $("#logo").click(function () {
-        window.location.href = "votes.jsp";
+        window.location.href = "getAllVoteInfo";
     });
     $("#managerVotes").click(function () {
         window.location.href = "votingList.jsp";
+    });
+    $("#accounterManager").click(function () {
+        window.location.href = "getCurrentLoginUserInfo";
+    });
+    $("#userInfo").click(function () {
+        window.location.href = "getCurrentLoginUserInfo";
     });
     $("#menu").click(function () {
         var displayVal = $("#manageList").css("display");

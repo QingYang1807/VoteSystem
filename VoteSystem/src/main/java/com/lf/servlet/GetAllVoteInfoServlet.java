@@ -25,16 +25,17 @@ public class GetAllVoteInfoServlet extends HttpServlet {
         //已结束的投票
         int finishedNumber = userDao.getAllFinishedVoteNumber();
         request.getSession().setAttribute("finishedNumber",finishedNumber);
-        //总投票数量
-//                int totalVoteNumber = userDao.getAllVotesNumber();
+        //总投票数量//查询数据中所有的投票数量
+         int totalVoteNumber = userDao.getAllVotesNumber();//查询数据中所有的投票数量
+         request.getSession().setAttribute("totalVoteNumber",totalVoteNumber);
         //总访问量
 //                int totalEnterNumber = userDao.getTotalEnterNumber();
         //已完成的投票
 
         //数据库中所有创建的的投票信息
-        ArrayList<Vote> arrayList = new ArrayList<>();
-        arrayList = userDao.getAllVoteInfo();
-        request.getSession().setAttribute("arrayList",arrayList);
+        ArrayList<Vote> voteArrayList = new ArrayList<>();
+        voteArrayList = userDao.getAllVoteInfo();
+        request.getSession().setAttribute("voteArrayList",voteArrayList);
 
         response.sendRedirect(request.getContextPath()+"/votes.jsp");
     }
