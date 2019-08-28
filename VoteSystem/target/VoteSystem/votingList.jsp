@@ -69,38 +69,46 @@
                     <div class="btn2_filtrate">
                         <a href=""><i class="fa fa-crosshairs" aria-hidden="true"></i>筛选</a>
                     </div>
-                    <div class="tableList">
-                        <table>
-                            <tr>
-                                <td>编号</td>
-                                <td>标题</td>
-                                <td>投票量</td>
-                                <td>状态</td>
-                                <td>时间</td>
-                                <td>操作</td>
-                            </tr>
-                            <%int i=1;%>
-                            <c:forEach items="${arrayList}" var="al">
-                                <tr>
-                                    <td id="votesID_<%=i%>"><c:out value="${al.votesId}"></c:out></td>
-                                    <td><c:out value="${al.votesName}"></c:out></td>
-                                    <td><c:out value="${al.contentVoteDesc}"></c:out></td>
-                                    <td><c:out value="${al.status}"></c:out></td>
-                                    <td>
-                                        开始时间:<c:out value="${al.startDate}"></c:out> <br>
-                                        结束时间:<c:out value="${al.endDate}"></c:out>
-                                    </td>
-                                    <td>
-                                        <span class="btn btn1" id="btn_edit_<%=i%>" onclick="editClick(this)">编辑</span>
-                                        <span class="btn btn2" id="btn_delete_<%=i%>" onclick="deleteClick(this)">删除</span>
-                                        <span class="btn btn3" id="btn_look_<%=i%>" onclick="lookClick(this)">查看</span>
-                                    </td>
-                                </tr>
-                                <%i++;%>
-                            </c:forEach>
+                    <c:choose>
+                        <c:when test="${votingNumber==0}">
+                            <span class="text-gradient vote0_notice">投票项为空，请 <a href="createVotes.jsp" class="text-gradient2">创建</a>哦~</span>
+                        </c:when>
+                        <c:when test="${votingNumber!=0}">
+                            <div class="tableList">
+                                <table>
+                                    <tr>
+                                        <td>编号</td>
+                                        <td>标题</td>
+                                        <td>投票量</td>
+                                        <td>状态</td>
+                                        <td>时间</td>
+                                        <td>操作</td>
+                                    </tr>
+                                    <%int i=1;%>
+                                    <c:forEach items="${arrayList}" var="al">
+                                        <tr>
+                                            <td id="votesID_<%=i%>"><c:out value="${al.votesId}"></c:out></td>
+                                            <td><c:out value="${al.votesName}"></c:out></td>
+                                            <td><c:out value="${al.contentVoteDesc}"></c:out></td>
+                                            <td><c:out value="${al.status}"></c:out></td>
+                                            <td>
+                                                开始时间:<c:out value="${al.startDate}"></c:out> <br>
+                                                结束时间:<c:out value="${al.endDate}"></c:out>
+                                            </td>
+                                            <td>
+                                                <span class="btn btn1" id="btn_edit_<%=i%>" onclick="editClick(this)">编辑</span>
+                                                <span class="btn btn2" id="btn_delete_<%=i%>" onclick="deleteClick(this)">删除</span>
+                                                <span class="btn btn3" id="btn_look_<%=i%>" onclick="lookClick(this)">查看</span>
+                                            </td>
+                                        </tr>
+                                        <%i++;%>
+                                    </c:forEach>
 
-                        </table>
-                    </div>
+                                </table>
+                            </div>
+                        </c:when>
+                    </c:choose>
+
                 </div>
             </div>
         </div>
@@ -133,8 +141,10 @@
         location.href="<%=basePath%>deleteVoteById?currentClickVotesId="+votesIDValue;
     }
     function lookClick(object){
-        var currentVotesId = $(object).attr("id");
-        alert(currentVotesId);
+        // var currentVotesId = $(object).attr("id");//currentVotesId="btn_look_1"
+        var votesIDValue = getVotesId(object);
+        alert("您正在查看的是ID为："+votesIDValue+"的投票项目");
+        location.href="<%=basePath%>getCurrentLookInfoById?currentClickVotesId="+votesIDValue;
     }
 </script>
 <script>

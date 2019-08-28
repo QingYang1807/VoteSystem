@@ -40,6 +40,14 @@
         <servlet-name>DeleteVoteByIdServlet</servlet-name>
         <servlet-class>com.lf.servlet.DeleteVoteByIdServlet</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>GetCurrentLookInfoByIdServlet</servlet-name>
+        <servlet-class>com.lf.servlet.GetCurrentLookInfoByIdServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>AddVoteServlet</servlet-name>
+        <servlet-class>com.lf.servlet.AddVoteServlet</servlet-class>
+    </servlet>
 
 
 
@@ -80,5 +88,13 @@
     <servlet-mapping>
         <servlet-name>DeleteVoteByIdServlet</servlet-name>
         <url-pattern>/deleteVoteById</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>GetCurrentLookInfoByIdServlet</servlet-name>
+        <url-pattern>/getCurrentLookInfoById</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>AddVoteServlet</servlet-name>
+        <url-pattern>/addVote</url-pattern>
     </servlet-mapping>
 </web-app>

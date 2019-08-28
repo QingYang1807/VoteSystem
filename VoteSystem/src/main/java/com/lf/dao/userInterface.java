@@ -2,6 +2,7 @@ package com.lf.dao;
 
 import com.lf.entity.User;
 import com.lf.entity.Vote;
+import com.lf.entity.VoteInfo;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -33,7 +34,11 @@ public interface userInterface {
 
     public int getAllVotesNumber();//获取总投票数量
 
-    public Vote getVoteInfoByID(String votesId);//通过投票ID查找此投票项目所有信息
+    public Vote getVoteTicketInfoByID(String votesId);//通过投票ID查找此投票项目所有信息
+    public VoteInfo getVoteNmberInfoByID(String votesId);//通过Id获取
     public void modifyVoteInfo(Vote vote);//通过Id修改、更新投票信息
     public void deleteVoteById(String deleteVoteId);//通过Id删除投票信息
+
+    public int getVoteNumberByColumnName(String currentVotingId,String columnName);//通过列名查询对应投票项目ID的票数
+    public void addVote(String currentVotingId,String addFindColumnName);//通过Id增加投票数+1
 }

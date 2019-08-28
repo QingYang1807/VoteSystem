@@ -48,3 +48,29 @@
 .btn1{background: #F37B1D;}
 .btn2{background: #0e90d2;}
 .btn3{background: #5eb95e;}
+.text-gradient {
+    display: inline-block;
+    color: green;
+    font-size: 20px;
+    font-family: '微软雅黑';
+    background-image: -webkit-gradient(linear, 0 0, 0 bottom, from(rgba(0, 82, 255, 0.95)), to(#cf08fd));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.text-gradient2 {
+    display: inline-block;
+    color: green;
+    font-size: 20px;
+    font-family: '微软雅黑';
+    background-image: -webkit-gradient(linear, 0 0, 0 bottom, from(rgba(250, 253, 0, 0.95)), to(#fd0002));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.backFrame span a{
+
+ }
+.vote0_notice{
+    display: block;
+    height: 50px;
+    margin: 20px 20px;
+}

@@ -42,6 +42,6 @@ public class AddUserServlet extends HttpServlet {
 //        request.setAttribute("LoginUserInfo",user);
         request.getSession().setAttribute("LoginUserInfo",user);
 //        request.getRequestDispatcher("votepage_origin.jsp").forward(request, response);
-        response.sendRedirect(request.getContextPath()+"/votepage_origin.jsp");
+        response.sendRedirect(request.getContextPath()+"/votes.jsp");
     }
 }

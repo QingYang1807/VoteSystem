@@ -2,9 +2,13 @@ package com.lf.dao;
 
 import com.lf.entity.User;
 import com.lf.entity.Vote;
+import com.lf.entity.VoteInfo;
 import com.lf.utils.DBUtil;
 
-import java.sql.*;
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -224,8 +228,12 @@ public class UserDao implements userInterface {
     public void createVote(Vote vote) {
         Connection con = DBUtil.getConnection();
         String sql = "insert into vote_ticket values(?,?,?,?,?,?,?,?,?,?)";
+        String sql2 = "insert into vote_info values(?,0,0,0,0)";
         try {
             PreparedStatement ps = con.prepareStatement(sql);
+            PreparedStatement ps2 = con.prepareStatement(sql2);//投票数 表
+            ps2.setString(1,vote.getVotesId());//投票数 表
+            ps2.executeUpdate();//投票数 表
             ps.setString(1,vote.getVotesId());
             ps.setString(2,vote.getVotesName());
             ps.setString(3,vote.getStartDate());
@@ -386,7 +394,7 @@ public class UserDao implements userInterface {
     }
 
     @Override
-    public Vote getVoteInfoByID(String votesId) {//通过投票ID查找此投票项目所有信息
+    public Vote getVoteTicketInfoByID(String votesId) {//通过投票ID查找此投票项目所有信息
         Connection con = DBUtil.getConnection();
         String sql="select * from vote_ticket where vt_id = ?";
         Vote voteByIdInfo = new Vote();
@@ -411,6 +419,29 @@ public class UserDao implements userInterface {
             e.printStackTrace();
         }
         return voteByIdInfo;
+    }
+
+    @Override
+    public VoteInfo getVoteNmberInfoByID(String votesId) {
+        Connection con = DBUtil.getConnection();
+        String sql = "select * from vote_info where vt_id = ?";
+        VoteInfo voteInfo = new VoteInfo();
+        try {
+            PreparedStatement ps = con.prepareStatement(sql);
+            ps.setString(1,votesId);
+            ResultSet rs =  ps.executeQuery();
+            while(rs.next()){
+                String VoteInfo = rs.getString(1);
+                int vtVoteOption1 = rs.getInt(2);
+                int vtVoteOption2 = rs.getInt(3);
+                int vtVoteOption3 = rs.getInt(4);
+                int vtVoteOption4 = rs.getInt(5);
+                voteInfo = new VoteInfo(VoteInfo,vtVoteOption1,vtVoteOption2,vtVoteOption3,vtVoteOption4);
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return voteInfo;
     }
 
     @Override
@@ -450,4 +481,37 @@ public class UserDao implements userInterface {
         }
     }
 
+    @Override
+    public int getVoteNumberByColumnName(String currentVotingId,String columnName) {//通过列名查询对应投票项目ID的票数
+        Connection con = DBUtil.getConnection();
+        String sql = "select "+columnName+" from vote_info where vt_id = '"+currentVotingId+"'";
+        int nowValue=0;
+        try {
+            PreparedStatement ps = con.prepareStatement(sql);
+            String lookSql = sql;
+            ResultSet rs = ps.executeQuery();
+            while(rs.next()){
+                nowValue = rs.getInt(columnName);
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return nowValue;
+    }
+
+    @Override
+    public void addVote(String currentVotingId,String addFindColumnName) {//通过Id增加投票数+1
+        Connection con = DBUtil.getConnection();
+        int nowValue = this.getVoteNumberByColumnName(currentVotingId,addFindColumnName);//通过列名查询的  未增加投票前的值
+        nowValue++;
+        String sql = "update vote_info set "+addFindColumnName+" = ? where vt_id = ?";
+        try {
+            PreparedStatement ps = con.prepareStatement(sql);
+            ps.setInt(1,nowValue);
+            ps.setString(2,currentVotingId);
+            ps.executeUpdate();
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+    }
 }

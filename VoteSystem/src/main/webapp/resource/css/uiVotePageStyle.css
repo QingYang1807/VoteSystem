@@ -1,13 +1,97 @@
 .voteFrame{
     text-align: center;
+    border: 2px green solid;
+    width: 100%;
+    padding: 20px 20px 20px 20px;
 }
-
-
-
-
-
-
-
+.box_item{
+    display: inline-block;
+    padding: 50px 50px 50px 50px ;
+}
+.vote_name,.radioStyle,.rectangle_bar{
+    display: block;
+    outline: none;
+}
+.rectangle_bar{
+    width: 50px;
+    /*height: 100px;*/
+    background: #fdf212;
+    padding: 0 0 0 0;
+    margin: 0px 0px 0px 5px;
+}
+.radioStyle,.box_item input{
+    margin: 20px 20px 20px 20px;
+    width: 20px;
+    height: 20px;
+}
+.text-gradient {
+    display: inline-block;
+    color: green;
+    font-size: 20px;
+    font-family: '微软雅黑';
+    background-image: -webkit-gradient(linear, 0 0, 0 bottom, from(rgba(0, 82, 255, 0.95)), to(#cf08fd));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.text-gradient2 {
+    display: inline-block;
+    color: green;
+    font-size: 20px;
+    font-family: '微软雅黑';
+    background-image: -webkit-gradient(linear, 0 0, 0 bottom, from(rgba(250, 253, 0, 0.95)), to(#fd0002));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.vote_name{
+    position: relative;
+    left: -33px;
+}
+.bar1{
+    background: #f9fd00;
+    height: 0px;
+}
+.bar2{
+    background: #002afd;
+    height: 0px;
+}
+.bar3{
+    background: #06fd00;
+    height: 0px;
+}
+.bar4{
+    background: #c600fd;
+    height: 0px;
+}
+.voteFrame .btn_style{
+    width: 100%;
+    display: block;
+    position: relative;
+}
+.voteFrame .btn_style input{
+    display: block;
+    margin: 20px auto;
+    border: none;
+    outline: none;
+    font-size: 24px;
+    padding: 10px 20px 10px 20px;
+    background-color: #47c147;
+    text-decoration: none;
+    color: #FFFFFF;
+    border-radius: 6px;
+}
+.voteFrame .btn_style input:hover{
+    background-color: #369436;
+}
+/*.bottom{*/
+/*    height: 50px;*/
+/*    width: 100%;*/
+/*}*/
+.row{
+    margin: 0;
+}
+.votes_number{
+    display: block;
+}
 
 
 

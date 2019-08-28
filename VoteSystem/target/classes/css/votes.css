@@ -75,7 +75,7 @@ body{
 
 /*管理列表*/
 .main .manageList{
-    width: 17%;
+    width: 15.5%;/*原来17%*/
     height: 500px;
     /*border: 1px red solid ;*/
     position: relative;

@@ -17,7 +17,7 @@ public class GetClickInfoServlet extends HttpServlet {
         String clickVotesID = request.getParameter("currentClickVotesId");
         request.getSession().setAttribute("currentActiveVoteId",clickVotesID);
         UserDao userDao = new UserDao();
-        Vote clickVotesInfo = userDao.getVoteInfoByID(clickVotesID);
+        Vote clickVotesInfo = userDao.getVoteTicketInfoByID(clickVotesID);
         request.getSession().setAttribute("clickVotesInfo",clickVotesInfo);
         response.sendRedirect(request.getContextPath()+"/editClickVote.jsp");
     }
