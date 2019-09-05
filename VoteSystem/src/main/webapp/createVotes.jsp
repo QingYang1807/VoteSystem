@@ -90,7 +90,9 @@
                                 <%
                                     Date date = new Date();
                                     SimpleDateFormat dateFormat = new SimpleDateFormat("yyyyMMddhhmmss");
+                                    SimpleDateFormat dateFormat2 = new SimpleDateFormat("yyyy-MM-dd");
                                     String voteId = "TP" + dateFormat.format(date);
+                                    String currentTime = dateFormat2.format(date);
                                 %>
                                 <%--                <%=voteId%>--%>
                                 <span>投票ID：</span>
@@ -103,7 +105,7 @@
                                 <input type="text" id="votesName" name="votes_name"></div>
                             <br>
                             <div class="start_date"><span>开始时间</span>
-                                <input type="date" id="startDate" name="start_date"></div>
+                                <input type="date" id="startDate" name="start_date" value="<%=currentTime%>"></div>
                             <br>
                             <div class="end_date"><span>结束时间</span>
                                 <input type="date" id="endDate" name="end_date">
@@ -112,16 +114,15 @@
 
                             <div class="vote_select" id="voteSelect">
                                 <span>内容项投票描述:</span>
-                                <input type="text" id="contentVoteDesc" name="content_vote_desc"><br>
-                                <span>选项内容：</span><br>
-                                <span id="span_input_1">选项1：<input type="text" id="vote_Option_1"
-                                                                 name="vote_Option_1"></span><br>
-                                <span id="span_input_2">选项2：<input type="text" id="vote_Option_2"
-                                                                 name="vote_Option_2"></span><br>
-                                <span id="span_input_3">选项3：<input type="text" id="vote_Option_3"
-                                                                 name="vote_Option_3"></span><br>
-                                <span id="span_input_4">选项4：<input type="text" id="vote_Option_4"
-                                                                 name="vote_Option_4"></span><br>
+                                <input type="text" id="contentVoteDesc" name="content_vote_desc"><br><br>
+                                <span id="span_input_1">投票选项1：<input type="text" id="vote_Option_1"
+                                                                 name="vote_Option_1"></span><br><br>
+                                <span id="span_input_2">投票选项2：<input type="text" id="vote_Option_2"
+                                                                 name="vote_Option_2"></span><br><br>
+                                <span id="span_input_3">投票选项3：<input type="text" id="vote_Option_3"
+                                                                 name="vote_Option_3"></span><br><br>
+                                <span id="span_input_4">投票选项4：<input type="text" id="vote_Option_4"
+                                                                 name="vote_Option_4"></span><br><br>
                             </div>
                             <input id="tagIndex" value="3" style="display: none"></span>
 

@@ -62,7 +62,7 @@
             <div class="loginItem">
                 <form action="loginServlet" method="post"><!--loginServlet-->
                     <input type="text" id="user_name" name="user_name" class="login_input1" placeholder="用户名/手机号码" value=""><br>
-                    <input type="text" id="user_password" name="user_password" class="login_input2" placeholder="请输入密码" value=""><br>
+                    <input type="password" id="user_password" name="user_password" class="login_input2" placeholder="请输入密码" value=""><br>
 <%--                    <input type="checkbox" name="loginStatus" class="login_input3">记住登录状态<br>--%>
                     <input type="button" value="登&nbsp;&nbsp;录" id="login_btn" class="submit_btn" onclick="isNull()">
                 </form>

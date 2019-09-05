@@ -60,7 +60,7 @@
     </div>
 
     <div class="tpb_login_font">
-        <span>用户登录</span>
+        <span>用户注册</span>
     </div>
 
     <div class="tpb_login_input">

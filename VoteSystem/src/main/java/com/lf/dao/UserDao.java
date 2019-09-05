@@ -71,7 +71,7 @@ public class UserDao implements userInterface {
     }
 
     @Override
-    public void upDateUser(User user) {
+    public void updateUser(User user) {
         int code=-1;
         Connection con=DBUtil.getConnection();
         String sql="update vote_user set vu_user_name=?,vu_user_password=?,vu_user_role_name=?," +

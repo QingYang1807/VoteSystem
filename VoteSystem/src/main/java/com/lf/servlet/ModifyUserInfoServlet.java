@@ -24,7 +24,7 @@ public class ModifyUserInfoServlet extends HttpServlet {
         String userVersion = request.getParameter("user_version");
         User user = new User(userName,userPassword,userRoleName,userPhoneNumber,userGender,1,userVersion);
         UserDao userDao = new UserDao();
-        userDao.upDateUser(user);
+        userDao.updateUser(user);
         request.getSession().setAttribute("mofidifyErrorNotice","恭喜修改成功！");
         response.sendRedirect(request.getContextPath()+"/getCurrentLoginUserInfo");
     }

@@ -9,7 +9,7 @@ import java.util.List;
 public interface userInterface {
     public List<User> findAll();
     public void addUser(User user);
-    public void upDateUser(User user);
+    public void updateUser(User user);
     public void deleteUser(String vu_user_name);
     public User findUserById(int id);
     public User findUserByUserName(User findUser);

@@ -16,7 +16,7 @@ public class GetCurrentLoginUserInfoServlet extends HttpServlet {
         request.setCharacterEncoding("utf8");
         UserDao userDao = new UserDao();
         User user = (User)request.getSession().getAttribute("LoginUserInfo");
-        User lastestUserInfo = userDao.findUserById(user.getUserId());
+        User lastestUserInfo = userDao.findUserByUserName(user);
         request.getSession().setAttribute("LoginUserInfo",lastestUserInfo);
         response.sendRedirect(request.getContextPath()+"/editUserInfo.jsp");
     }
